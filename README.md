@@ -2,12 +2,14 @@
 Simple Django app with single endpoint for calculating income tax.
 
 ### Starting the project
-1. Run `docker-compose up` to build images and start containers.
-2. Run `docker-compose exec backend python manage.py load_tax_bands` to populate database with tax rates data from 
+1. Clone repository `git clone git@github.com:zyks/tax-calc.git`
+2. Run `cp .env_sample .env` to create `.env` file in root folder
+3. Run `docker-compose up` to build images and start containers
+4. Run `docker-compose exec backend python manage.py load_tax_bands` to populate database with tax rates data from
 `tax_bands.json`.
-3. Send POST request to `/api/calculator/tax/` endpoint to calculate tax, set `country` (`UK` / `PL`) and `income`
+5. Send POST request to `/api/calculator/tax/` endpoint to calculate tax, set `country` (`UK` / `PL`) and `income`
 body parameters.
-4. Run `docker-compose exec backend python3 manage.py test` to start tests.
+6. Run `docker-compose exec backend python3 manage.py test` to start tests.
 
 
 ### Example request
